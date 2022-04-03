@@ -29,7 +29,7 @@ def send_message_to_tg():
 
     updater = Updater(TG_TOKEN)
     updater.bot.send_message(chat_id=GROUP_ID,
-                             text=f'Дней до ОПВ: {days_left}' + f' {random_emoji}')
+                             text=f'Days left to day X: {days_left} {random_emoji}')
     print('sending...')
 
 
