@@ -2,7 +2,7 @@ from datetime import datetime
 from telegram.ext import Updater
 import random
 import emojis_list
-from cfg import TG_TOKEN, GROUP_ID, DAY_X
+from cfg import TG_TOKEN, TG_CHAT_ID, DAY_X
 
 TODAY = datetime.now()
 
@@ -28,7 +28,7 @@ def send_message_to_tg():
     random_emoji = random.choice(emojis_list.emoji_list)
 
     updater = Updater(TG_TOKEN)
-    updater.bot.send_message(chat_id=GROUP_ID,
+    updater.bot.send_message(chat_id=TG_CHAT_ID,
                              text=f'Days left to day X: {days_left} {random_emoji}')
     print('sending...')
 
